@@ -1,0 +1,31 @@
+@import "../partials/_mixin.scss";
+
+.primary-header {
+	color: map-get($themeColorsLightTheme, "veryDarkBlue-Text");
+
+	@include mq(768px) {
+		& {
+			font-size: 3rem;
+		}
+	}
+}
+
+.secondary-header {
+	color: map-get($themeColorsLightTheme, "darkGrayishBlue-Text");
+	border-bottom: 0.1rem solid
+		map-get($themeColorsLightTheme, "darkGrayishBlue-Text");
+
+	@include mq(768px) {
+		& {
+			border-bottom: none;
+			font-size: 1.5rem;
+		}
+	}
+
+	padding: 0.5rem 0 2rem;
+	font-size: 1.4rem;
+}
+
+.toggle__header {
+	color: map-get($themeColorsLightTheme, "darkGrayishBlue-Text");
+}

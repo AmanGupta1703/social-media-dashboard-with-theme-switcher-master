@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Social Media Dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<!-- TODO: FOLDER STRUCTURE -->
+<!-- TODO: CREATE MIXIN WHERE NECESSARY -->
+
+<body>
+
+    <div class="container">
+
+        <main class="main main--section">
+
+            <header class="main__header">
+
+                <div class="headings">
+                    <h1 class="primary-header">Social Media Dashboard</h1>
+                    <h2 class="secondary-header">Total Followers: 23,004</h2>
+                </div>
+
+                <section class="toggle">
+
+                    <h3 class="toggle__header">Dark Mode</h3>
+
+                    <div class="toggle__container">
+
+                        <input type="checkbox" id="toggle" name="checkbox" class="toggle__checkbox">
+                        <label for="toggle" class="switch"></label>
+
+                    </div>
+
+                </section>
+
+            </header>
+
+            <section class="social-media social-media--stats">
+
+                <article class="card facebook--card">
+
+                    <h3 class="card__header">
+                        <img src="./images/icon-facebook.svg" alt="icon-facebook"> @nathanf
+                    </h3>
+
+                    <p class="card__follower-count">1987 <span>Followers</span></p>
+
+                    <p class="card__current-day-stats">
+                        <img src="./images/icon-up.svg" alt="">
+                        12 Today
+                    </p>
+
+                </article>
+
+                <article class="card twitter--card">
+
+                    <h3 class="card__header">
+                        <img src="./images/icon-twitter.svg" alt="icon-twitter"> @nathanf
+                    </h3>
+
+                    <p class="card__follower-count">1044 <span>Followers</span></p>
+
+                    <p class="card__current-day-stats">
+                        <img src="./images/icon-up.svg" alt="">
+                        99 Today
+                    </p>
+
+                </article>
+
+                <article class="card instagram--card">
+
+                    <h3 class="card__header">
+                        <img src="./images/icon-instagram.svg" alt="icon-instagram"> @realnathanf
+                    </h3>
+
+                    <p class="card__follower-count">11k <span>Followers</span></p>
+
+                    <p class="card__current-day-stats">
+                        <img src="./images/icon-up.svg" alt="">
+                        1099 Today
+                    </p>
+
+                </article>
+
+                <article class="card youtube--card">
+
+                    <h3 class="card__header">
+                        <img src="./images/icon-youtube.svg" alt="icon-youtube"> @Nathan F.
+                    </h3>
+
+                    <p class="card__follower-count">8239 <span>Subscribers</span></p>
+
+                    <p class="card__current-day-stats">
+                        <img src="./images/icon-down.svg" alt="">
+                        144 Today
+                    </p>
+
+                </article>
+
+            </section>
+
+            <section class="today-stats stats">
+
+                <h1 class="stats__header">Overview - Today</h1>
+
+                <div class="box-container">
+
+                    <article class="box box--facebook-page-views">
+
+                        <div class="top top--box">
+
+                            <h2 class="top__header">Page Views</h2>
+                            <img src="./images/icon-facebook.svg" alt="icon-facebook" class="top__img">
+
+                        </div>
+
+                        <div class="bottom bottom--box">
+
+                            <h3 class="bottom__stat">87</h3>
+                            <p class="bottom__stat-percentage">
+                                <img src="./images/icon-up.svg" alt="icon-up">
+                                <span class="limeGreen-primary">3%</span>
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="box box--facebook-likes">
+
+                        <div class="top top--box">
+
+                            <h2 class="top__header">Likes</h2>
+                            <img src="./images/icon-facebook.svg" alt="icon-facebook" class="top__img">
+
+                        </div>
+
+                        <div class="bottom bottom--box">
+
+                            <h3 class="bottom__stat">52</h3>
+                            <p class="bottom__stat-percentage">
+                                <img src="./images/icon-down.svg" alt="icon-down">
+                                <span class="brightRed-primary">2%</span>
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="box box--instagram-likes">
+
+                        <div class="top top--box">
+
+                            <h2 class="top__header">Likes</h2>
+                            <img src="./images/icon-instagram.svg" alt="icon-instagram" class="top__img">
+
+                        </div>
+
+                        <div class="bottom bottom--box">
+
+                            <h3 class="bottom__stat">5462</h3>
+                            <p class="bottom__stat-percentage">
+                                <img src="./images/icon-up.svg" alt="icon-up">
+                                <span class="limeGreen-primary">2257%</span>
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="box box--instagram-page-views">
+
+                        <div class="top top--box">
+
+                            <h2 class="top__header">Profile Views</h2>
+                            <img src="./images/icon-instagram.svg" alt="icon-instagram" class="top__img">
+
+                        </div>
+
+                        <div class="bottom bottom--box">
+
+                            <h3 class="bottom__stat">52k</h3>
+                            <p class="bottom__stat-percentage">
+                                <img src="./images/icon-up.svg" alt="icon-up">
+                                <span class="limeGreen-primary">1375%</span>
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="box box--twitter-retweets">
+
+                        <div class="top top--box">
+
+                            <h2 class="top__header">Retweets</h2>
+                            <img src="./images/icon-twitter.svg" alt="icon-twitter" class="top__img">
+
+                        </div>
+
+                        <div class="bottom bottom--box">
+
+                            <h3 class="bottom__stat">117</h3>
+                            <p class="bottom__stat-percentage">
+                                <img src="./images/icon-up.svg" alt="icon-up">
+                                <span class="limeGreen-primary">303%</span>
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="box box--twitter-likes">
+
+                        <div class="top top--box">
+
+                            <h2 class="top__header">Likes</h2>
+                            <img src="./images/icon-twitter.svg" alt="icon-twitter" class="top__img">
+
+                        </div>
+
+                        <div class="bottom bottom--box">
+
+                            <h3 class="bottom__stat">507</h3>
+                            <p class="bottom__stat-percentage">
+                                <img src="./images/icon-up.svg" alt="icon-up">
+                                <span class="limeGreen-primary">553%</span>
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="box box--youtube-likes">
+
+                        <div class="top top--box">
+
+                            <h2 class="top__header">Likes</h2>
+                            <img src="./images/icon-youtube.svg" alt="icon-youtube" class="top__img">
+
+                        </div>
+
+                        <div class="bottom bottom--box">
+
+                            <h3 class="bottom__stat">107</h3>
+                            <p class="bottom__stat-percentage">
+                                <img src="./images/icon-down.svg" alt="icon-down">
+                                <span class="limeGreen-primary">19%</span>
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="box box--youtube-likes">
+
+                        <div class="top top--box">
+
+                            <h2 class="top__header">Total Views</h2>
+                            <img src="./images/icon-youtube.svg" alt="icon-youtube" class="top__img">
+
+                        </div>
+
+                        <div class="bottom bottom--box">
+
+                            <h3 class="bottom__stat">1407</h3>
+                            <p class="bottom__stat-percentage">
+                                <img src="./images/icon-down.svg" alt="icon-down">
+                                <span class="limeGreen-primary">12%</span>
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>

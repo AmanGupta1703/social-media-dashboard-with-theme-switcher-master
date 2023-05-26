@@ -1,0 +1,13 @@
+@import "../partials/mixin";
+
+.main--section {
+	background: map-get($themeColorsLightTheme, "white-BG");
+	padding: 3rem 1rem 2rem;
+}
+
+@include mq(768px) {
+	.main__header {
+		display: flex;
+		justify-content: space-between;
+	}
+}

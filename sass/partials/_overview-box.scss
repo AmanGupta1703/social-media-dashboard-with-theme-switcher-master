@@ -1,0 +1,73 @@
+@import "../partials/mixin";
+
+.stats {
+    margin: 3rem 0 0;
+
+    &__header {
+        color: map-get($themeColorsLightTheme, "darkGrayishBlue-Text");
+        font-size: 2rem;
+        margin: 0 0 2rem;
+    }
+}
+
+.box-container {
+
+    @include mq(768px) {
+        & {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 2rem;
+        }
+    }
+
+}
+
+.box {
+    background: map-get($themeColorsLightTheme, "lightGrayishBlue-CardBG");
+    border-radius: 1rem;
+    padding: 2rem;
+
+    &:not(:last-child) {
+        margin: 0 0 1.6rem;
+    }
+
+    // @include mq(768px) {
+    //     & {
+    //         width: 25rem;
+    //     }
+    // }
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 1.2rem;
+
+    &__header {
+        color: map-get($themeColorsLightTheme, "darkGrayishBlue-Text");
+    }
+
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__stat {
+        font-size: 2.4rem;
+    }
+
+    &__stat-percentage {
+        display: flex;
+        align-items: center;
+        gap: .2rem;
+        font-weight: map-get($fontWeight, "700");
+
+        @include mq(768px) {
+            & {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

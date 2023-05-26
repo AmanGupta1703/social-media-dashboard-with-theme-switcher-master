@@ -1,0 +1,97 @@
+@import "../partials/mixin";
+
+@include mq(768px) {
+	.social-media {
+		display: flex;
+		justify-content: space-between;
+		gap: 2rem;
+		margin: 4rem 0 0;
+	}
+}
+
+.card {
+	color: map-get($themeColorsLightTheme, "veryDarkBlue-Text");
+	background: map-get($themeColorsLightTheme, "lightGrayishBlue-CardBG");
+	border-radius: 1.2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2.8rem;
+	padding: 2rem 0;
+	position: relative;
+
+	@include mq(768px) {
+		& {
+			flex-grow: 1;
+		}
+	}
+
+	&:not(:last-child) {
+		margin: 0 0 2.2rem;
+	}
+
+	&::before {
+		@include add-top-border(map-get($themeColorsPrimary, "facebook"));
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		color: map-get($themeColorsLightTheme, "darkGrayishBlue-Text");
+	}
+
+	&__follower-count {
+		font-weight: map-get($fontWeight, "700");
+		font-size: 3rem;
+		text-align: center;
+		text-transform: uppercase;
+
+		span {
+			display: block;
+			font-weight: map-get($fontWeight, "400");
+			font-size: 1.4rem;
+			letter-spacing: 0.3rem;
+		}
+	}
+
+	&__current-day-stats {
+		color: map-get($themeColorsPrimary, "limeGreen");
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-weight: map-get($fontWeight, "700");
+
+		@include mq(768px) {
+			& {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+.twitter--card {
+	&::before {
+		@include add-top-border(map-get($themeColorsPrimary, "facebook"));
+	}
+}
+
+.instagram--card {
+	&::before {
+		@include add-top-border-gradient(
+			map-get($themeColorsPrimary, "instagram-gradient-color-1"),
+			map-get($themeColorsPrimary, "instagram-gradient-color-2")
+		);
+	}
+}
+
+.youtube--card {
+	&::before {
+		@include add-top-border(map-get($themeColorsPrimary, "youTube"));
+	}
+
+	.card__current-day-stats {
+		color: map-get($themeColorsPrimary, "brightRed");
+	}
+}

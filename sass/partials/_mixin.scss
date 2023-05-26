@@ -1,0 +1,35 @@
+@mixin add-top-border($border-color) {
+	content: "";
+	position: absolute;
+	top: -0.2em;
+	left: 0.1rem;
+	background: $border-color;
+	border-top-left-radius: 1.2rem;
+	border-top-right-radius: 1.2rem;
+	width: 99%;
+	height: 0.6rem;
+	z-index: 1;
+}
+
+@mixin add-top-border-gradient($gradient-color-1, $gradient-color-2) {
+	content: "";
+	position: absolute;
+	top: -0.2em;
+	left: 0.1rem;
+	background: linear-gradient(
+		to right,
+		$gradient-color-1,
+		$gradient-color-2
+	);
+	border-top-left-radius: 1.2rem;
+	border-top-right-radius: 1.2rem;
+	width: 99%;
+	height: 0.6rem;
+	z-index: 1;
+}
+
+@mixin mq($value) {
+	@media (min-width: $value) {
+		@content;
+	}
+}
