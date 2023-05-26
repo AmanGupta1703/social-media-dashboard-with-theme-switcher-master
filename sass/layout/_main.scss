@@ -1,4 +1,4 @@
-@import "../partials/mixin";
+@import "../abstracts/mixin";
 
 .main--section {
 	background: map-get($themeColorsLightTheme, "white-BG");
