@@ -19,16 +19,13 @@
 	justify-content: space-between;
 	gap: 2.8rem;
 	padding: 2rem 0;
+	margin-bottom: 2.5rem;
 	position: relative;
 
 	@include mq(768px) {
 		& {
 			flex-grow: 1;
 		}
-	}
-
-	&:not(:last-child) {
-		margin: 0 0 2.2rem;
 	}
 
 	&::before {

@@ -16,8 +16,18 @@ html {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Inter", sans-serif;
   font-weight: 400;
+  min-height: 100vh;
 }
 
 .limeGreen-primary {
@@ -49,7 +59,6 @@ body {
 }
 
 .main--section {
-  background: hsl(0deg, 0%, 100%);
   padding: 3rem 1rem 2rem;
 }
 
@@ -112,6 +121,10 @@ body {
           justify-content: space-between;
   margin: 1rem 0 2rem;
 }
+.toggle__header {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
 
 .switch {
   cursor: pointer;
@@ -138,7 +151,7 @@ body {
 }
 
 .toggle__checkbox {
-  display: none;
+  visibility: hidden;
 }
 .toggle__checkbox:checked + .switch::after {
   -webkit-transform: translate(2rem, 0);
@@ -185,6 +198,7 @@ body {
           justify-content: space-between;
   gap: 2.8rem;
   padding: 2rem 0;
+  margin-bottom: 2.5rem;
   position: relative;
 }
 @media (min-width: 768px) {
@@ -193,9 +207,6 @@ body {
         -ms-flex-positive: 1;
             flex-grow: 1;
   }
-}
-.card:not(:last-child) {
-  margin: 0 0 2.2rem;
 }
 .card::before {
   content: "";
@@ -292,12 +303,17 @@ body {
 }
 
 .stats {
-  margin: 3rem 0 0;
+  margin: 4rem 0 0;
 }
 .stats__header {
   color: hsl(228deg, 12%, 44%);
   font-size: 2rem;
   margin: 0 0 2rem;
+}
+@media (min-width: 768px) {
+  .stats__header {
+    font-size: 2.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -314,9 +330,7 @@ body {
   background: hsl(227deg, 47%, 96%);
   border-radius: 1rem;
   padding: 2rem;
-}
-.box:not(:last-child) {
-  margin: 0 0 1.6rem;
+  margin-bottom: 1.5rem;
 }
 
 .top {
@@ -360,4 +374,45 @@ body {
   .bottom__stat-percentage {
     font-size: 1.2rem;
   }
+}
+
+.dark {
+  background: hsl(230deg, 17%, 14%);
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.dark .primary-header {
+  color: hsl(0deg, 0%, 100%);
+}
+.dark::before {
+  content: "";
+  width: 100%;
+  height: 30vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.dark .toggle__header {
+  font-size: 1.5rem;
+}
+.dark .card {
+  color: hsl(0deg, 0%, 100%);
+  background: hsl(228deg, 28%, 20%);
+  -webkit-transition: all 0.9s ease;
+  transition: all 0.9s ease;
+}
+.dark .card__follower-count span {
+  margin-top: 0.5rem;
+  color: hsl(228deg, 34%, 66%);
+}
+.dark .box {
+  background: hsl(228deg, 28%, 20%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.dark .bottom__stat {
+  color: hsl(0deg, 0%, 100%);
 }

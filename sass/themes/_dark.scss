@@ -1,0 +1,54 @@
+.dark {
+    background: map-get($themeColorsDarkTheme, "veryDarkBlue-BG");
+    transition: all .8s ease;
+
+    .primary-header {
+        color: map-get($themeColorsDarkTheme, "white-Text");
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 30vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        // background: map-get($themeColorsDarkTheme, "veryDarkBlue-Top-BGPattern");
+        z-index: -1;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+
+    .toggle__header {
+        font-size: 1.5rem;
+    }
+
+    .card {
+        color: map-get($themeColorsDarkTheme, "white-Text");
+        background: map-get($themeColorsDarkTheme, "darkDesaturatedBlue-CardBG");
+        transition: all .9s ease;
+
+        &__follower-count {
+
+            span {
+                margin-top: .5rem;
+                color: map-get($themeColorsDarkTheme, "desaturatedBlue-Text");
+            }
+
+        }
+    }
+
+    .box {
+        background: map-get($themeColorsDarkTheme, "darkDesaturatedBlue-CardBG");
+        transition: all 1s ease;
+    }
+
+    .bottom {
+
+        &__stat {
+            color: map-get($themeColorsDarkTheme, "white-Text");
+        }
+
+    }
+
+}

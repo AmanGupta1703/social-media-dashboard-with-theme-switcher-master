@@ -1,12 +1,18 @@
 @import "../abstracts/mixin";
 
 .stats {
-    margin: 3rem 0 0;
+    margin: 4rem 0 0;
 
     &__header {
         color: map-get($themeColorsLightTheme, "darkGrayishBlue-Text");
         font-size: 2rem;
         margin: 0 0 2rem;
+
+        @include mq(768px) {
+            & {
+                font-size: 2.5rem;
+            }
+        }
     }
 }
 
@@ -26,10 +32,7 @@
     background: map-get($themeColorsLightTheme, "lightGrayishBlue-CardBG");
     border-radius: 1rem;
     padding: 2rem;
-
-    &:not(:last-child) {
-        margin: 0 0 1.6rem;
-    }
+    margin-bottom: 1.5rem; 
 
     // @include mq(768px) {
     //     & {
